@@ -119,8 +119,8 @@ const peers = {}
 const socket = io.connect('/')
 console.log(socket)
 const myPeer = new Peer(undefined, {
-    host: '/',
-    port: '3001'
+    host: '/cache-fort.herokuapp.com',
+    port: '445'
 })
 
 myPeer.on('open', id => {
