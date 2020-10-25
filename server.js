@@ -35,7 +35,7 @@ server.listen(process.env.PORT || 8080, () => {
 
 const peerServer = ExpressPeerServer(server, {
     debug: true,
-    path: '/peers'
+    path: '/peer'
 });
 
 app.use('/peerjs', peerServer)
