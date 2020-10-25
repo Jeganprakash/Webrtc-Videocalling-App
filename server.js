@@ -38,4 +38,4 @@ const peerServer = ExpressPeerServer(server, {
     path: '/peer'
 });
 
-app.use('/peerjs', peerServer)
+app.use(peerServer)
