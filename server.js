@@ -31,3 +31,10 @@ io.on('connection', socket => {
 server.listen(process.env.PORT || 8080, () => {
     console.log("success on server listening")
 })
+
+const peerServer = ExpressPeerServer(server, {
+    debug: true,
+    path: '/peers'
+});
+
+app.use('/peerjs', peerServer)
