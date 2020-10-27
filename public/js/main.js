@@ -49,7 +49,7 @@ photoFilter.addEventListener('change', function (e) {
     filter = e.target.value;
 
     //add video css filter
-    total = videotag.length;
+    total = videotags.length;
     for (i = 0; i < total; i++) {
         videotags[i].style.filter = filter;
     }
@@ -63,7 +63,7 @@ clearButton.addEventListener('click', function (e) {
     //change filter back to none
     filter = 'none';
     //Set video Filter
-    total = videotag.length;
+    total = videotags.length;
     for (i = 0; i < total; i++) {
         videotags[i].style.filter = filter;
     }
