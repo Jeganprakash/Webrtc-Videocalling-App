@@ -122,7 +122,7 @@ navigator.mediaDevices.getUserMedia({ video: true, audio: true })
 
 const peers = {}
 //Webrtc client
-const socket = io.connect('/')
+const socket = io.connect("https://cache-fort.herokuapp.com/")
 console.log(socket)
 const myPeer = new Peer(undefined, {
     host: '/',
@@ -135,7 +135,11 @@ myPeer.on('open', id => {
     console.log(id)
 })
 socket.on('user-disconnected', userId => {
-    if (peers[userId]) peers[userId].close()
+    if (peers[userId]) {
+        peers[userId].close();
+        alert("user disconnected")
+    }
+
 
 })
 const video2 = document.createElement('video')
