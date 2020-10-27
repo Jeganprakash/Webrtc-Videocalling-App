@@ -36,61 +36,61 @@ const child = document.createElement('video');
 // }, false)
 
 
-// photoButton.addEventListener('click', function (e) {
-//     takePicture();
-//     e.preventDefault();
+photoButton.addEventListener('click', function (e) {
+    takePicture();
+    e.preventDefault();
 
-// }, false);
+}, false);
 
 // //Filter event
-// photoFilter.addEventListener('change', function (e) {
+photoFilter.addEventListener('change', function (e) {
 
-//     //Set filter to chosen option
-//     filter = e.target.value;
+    //Set filter to chosen option
+    filter = e.target.value;
 
-//     //add video css filter
-//     video.style.filter = filter;
-//     e.preventDefault();
-// });
+    //add video css filter
+    video.style.filter = filter;
+    e.preventDefault();
+});
 
 // //Clear event
-// clearButton.addEventListener('click', function (e) {
-//     //clear photos
-//     photos.innerHTML = '';
-//     //change filter back to none
-//     filter = 'none';
-//     //Set video Filter
-//     video.style.filter = filter;
-//     //Reset select List
-//     photoFilter.selectedIndex = 0;
-// })
+clearButton.addEventListener('click', function (e) {
+    //clear photos
+    photos.innerHTML = '';
+    //change filter back to none
+    filter = 'none';
+    //Set video Filter
+    video.style.filter = filter;
+    //Reset select List
+    photoFilter.selectedIndex = 0;
+})
 
 // //Take picture from canvas
-// function takePicture() {
-//     const context = canvas.getContext('2d');
-//     if (width && height) {
-//         //set canvas props
-//         canvas.width = width;
-//         canvas.height = height;
+function takePicture() {
+    const context = canvas.getContext('2d');
+    if (width && height) {
+        //set canvas props
+        canvas.width = width;
+        canvas.height = height;
 
-//         //Draw an image of the video ont the canvas
-//         context.drawImage(video, 0, 0, width, height);
+        //Draw an image of the video ont the canvas
+        context.drawImage(video, 0, 0, width, height);
 
-//         //Create image from canvas
-//         const imgUrl = canvas.toDataURL('image/png');
+        //Create image from canvas
+        const imgUrl = canvas.toDataURL('image/png');
 
-//         //create img Element
-//         const img = document.createElement('img');
+        //create img Element
+        const img = document.createElement('img');
 
-//         //Set img src
-//         img.setAttribute('src', imgUrl);
+        //Set img src
+        img.setAttribute('src', imgUrl);
 
-//         //set image filter
-//         img.style.filter = filter;
+        //set image filter
+        img.style.filter = filter;
 
-//         photos.appendChild(img);
-//     }
-// }
+        photos.appendChild(img);
+    }
+}
 
 
 navigator.mediaDevices.getUserMedia({ video: true, audio: true })
@@ -171,3 +171,6 @@ function addVideoStream(videox, stream) {
 
 //     }
 // }, false)
+
+
+const videotag = getElementsByTagName("video");
