@@ -74,7 +74,7 @@ clearButton.addEventListener('click', function (e) {
 // //Take picture from canvas
 function takePicture() {
     const context = canvas.getContext('2d');
-    if (width && height) {
+    if (width && 300) {
         //set canvas props
         canvas.width = 300;
         canvas.height = 300;
