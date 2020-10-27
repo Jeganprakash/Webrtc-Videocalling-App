@@ -80,7 +80,7 @@ function takePicture() {
         canvas.height = 300;
 
         //Draw an image of the video ont the canvas
-        context.drawImage(videotag[videotag.length - 1], 0, 0, width, height);
+        context.drawImage(videotags[videotags.length - 1], 0, 0, width, height);
 
         //Create image from canvas
         const imgUrl = canvas.toDataURL('image/png');
@@ -179,4 +179,4 @@ function addVideoStream(videox, stream) {
 // }, false)
 
 
-const videotag = document.getElementsByTagName("VIDEO");
+const videotags = document.getElementsByTagName("VIDEO");
