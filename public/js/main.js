@@ -80,7 +80,7 @@ function takePicture() {
         canvas.height = 300;
 
         //Draw an image of the video ont the canvas
-        context.drawImage(videotags[videotags.length - 1], 0, 0, width, height);
+        context.drawImage(videotags[videotags.length - 1], 0, 0, 300, 300);
 
         //Create image from canvas
         const imgUrl = canvas.toDataURL('image/png');
@@ -159,6 +159,8 @@ function addVideoStream(videox, stream) {
     videox.addEventListener('loadedmetadata', () => {
         videox.play()
     })
+    var color = "#" + Math.floor(Math.random() * 0xFFFFFF).toString(16);
+    videox.style.borderColor = color;
     topcon.appendChild(videox)
     //play when ready
 

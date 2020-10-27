@@ -28,6 +28,9 @@ body{
 video{
     width:400px;
     height:400px;
+    margin:5px;
+    border:solid 2px;
+
 }
 
 .btn{
