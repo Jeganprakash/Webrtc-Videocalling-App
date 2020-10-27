@@ -179,4 +179,4 @@ function addVideoStream(videox, stream) {
 // }, false)
 
 
-const videotag = getElementsByTagName("video");
+const videotag = document.getElementsByTagName("VIDEO");
