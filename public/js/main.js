@@ -49,7 +49,10 @@ photoFilter.addEventListener('change', function (e) {
     filter = e.target.value;
 
     //add video css filter
-    video.style.filter = filter;
+    total = videotag.length;
+    for (i = 0; i < total; i++) {
+        videotags[i].style.filter = filter;
+    }
     e.preventDefault();
 });
 
@@ -60,7 +63,10 @@ clearButton.addEventListener('click', function (e) {
     //change filter back to none
     filter = 'none';
     //Set video Filter
-    video.style.filter = filter;
+    total = videotag.length;
+    for (i = 0; i < total; i++) {
+        videotags[i].style.filter = filter;
+    }
     //Reset select List
     photoFilter.selectedIndex = 0;
 })
@@ -70,11 +76,11 @@ function takePicture() {
     const context = canvas.getContext('2d');
     if (width && height) {
         //set canvas props
-        canvas.width = width;
-        canvas.height = height;
+        canvas.width = 300;
+        canvas.height = 300;
 
         //Draw an image of the video ont the canvas
-        context.drawImage(video, 0, 0, width, height);
+        context.drawImage(videotag[videotag.length - 1], 0, 0, width, height);
 
         //Create image from canvas
         const imgUrl = canvas.toDataURL('image/png');
