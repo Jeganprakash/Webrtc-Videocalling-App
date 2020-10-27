@@ -122,7 +122,7 @@ navigator.mediaDevices.getUserMedia({ video: true, audio: true })
 
 const peers = {}
 //Webrtc client
-const socket = io.connect("https://cache-fort.herokuapp.com/")
+
 console.log(socket)
 const myPeer = new Peer(undefined, {
     host: '/',
